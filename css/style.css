@@ -28,8 +28,6 @@ p {
     font-size: 14px;
 }
 
-h1 {}
-
 h2 {
     font-size: 16px;
 }
@@ -39,6 +37,19 @@ h3 {
     align-items: center;
     padding-right: 20px;
 }
+
+.euro {
+    font-weight: 700;
+}
+
+.blue-star {
+    color: #0065fc;
+}
+
+.neutral-star {
+    color: #f2f2f2;
+}
+
 
 /*HEADER*/
 header {
@@ -284,9 +295,8 @@ form {
 
 .iconstars {
     display: flex;
-
-    color: #0065fc;
-    font-size: 14px;
+    padding-top: 4px;
+    padding-bottom: 8px;
 }
 
 /*POPULAIRES*/
@@ -314,9 +324,9 @@ form {
 .iconbackground {
     margin-left: 18px;
     border-radius: 25px;
-    color: #0065fc;
     font-size: 20px;
     background-color: transparent;
+    color: #0065FC;
 }
 
 .map-background-popular {
@@ -343,7 +353,7 @@ form {
 .article-group-popular {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -540,13 +550,15 @@ footer {
     .map-background-activities {
         border-radius: 20px;
         box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.1);
-        width: 286px;
+        width: 100%;
         height: 100%;
     }
-
+    .article-group-activities a {
+        width: 100%;
+    }
     .img-activities {
         height: 144px;
-        width: 100%;
+        min-width: 100%;
         background-size: cover;
         background-position: center;
         border-radius: 15px 15px 0 0;
