@@ -1,8 +1,10 @@
 /* GENERAL */
+
 body {
     font-family: Raleway, sans-serif;
     margin-left: 2%;
     margin-right: 2%;
+    max-width: 1400px;
 }
 
 .flexbetween {
@@ -42,6 +44,12 @@ h3 {
     font-weight: 700;
 }
 
+.iconstars {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+}
+
 .blue-star {
     color: #0065fc;
 }
@@ -56,7 +64,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 30px;
     margin-bottom: 50px;
     height: 83px;
 }
@@ -65,6 +72,7 @@ header {
     width: 61.09px;
     height: 19px;
 }
+
 
 /*NAV*/
 
@@ -76,6 +84,7 @@ ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+    margin-left: 25px;
     padding: 0;
     width: 100%;
 }
@@ -112,7 +121,6 @@ form {
     text-align: center;
     padding: 10px;
 }
-
 
 .input-field {
     background: transparent;
@@ -160,16 +168,14 @@ form {
     background-color: transparent;
     text-align: center;
     padding-left: 2px;
-
 }
 
-/* FILTRES */
 
+/* FILTRES */
 
 .filters {
     display: flex;
     flex-direction: row;
-
 }
 
 .buttonfilters {
@@ -201,14 +207,12 @@ form {
     background-color: #DEEBFF;
 }
 
-
 .iconfilter {
     margin-left: 18px;
     border-radius: 25px;
     color: #0065fc;
     font-size: 20px;
     background-color: transparent;
-
 }
 
 .icontext {
@@ -219,6 +223,7 @@ form {
     border-radius: 0 25px 25px 0;
     text-align: center;
 }
+
 
 /*INFO*/
 
@@ -239,7 +244,12 @@ form {
     border-radius: 50% 50% 50% 50%;
 }
 
+
 /*HERBERGEMENTS*/
+
+#accomodations {
+    width: 100%;
+}
 
 .background-accomodations {
     display: flex;
@@ -253,18 +263,17 @@ form {
     padding-bottom: 52px;
     gap: 30px;
     margin-right: 20px;
-    box-sizing: border-box;
 }
 
 .article-group-accomodations {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-evenly;
     gap: 25px;
 }
 
 .article-group-accomodations a {
-    max-width: 246px;
+    max-width: 206px;
     height: 199px;
 }
 
@@ -281,11 +290,13 @@ form {
 }
 
 .text-maps {
+    position: relative;
     padding-left: 16px;
+    padding-bottom: 8px;
 }
 
 .img-accomodations {
-    width: 234px;
+    width: 194px;
     height: 124px;
     background-size: cover;
     background-position: center;
@@ -293,11 +304,6 @@ form {
     object-fit: cover;
 }
 
-.iconstars {
-    display: flex;
-    padding-top: 4px;
-    padding-bottom: 8px;
-}
 
 /*POPULAIRES*/
 
@@ -309,9 +315,8 @@ form {
     height: 100%;
     border-radius: 20px;
     background-color: #f2f2f2;
-    padding: 30px;
+    padding: 26px;
     gap: 30px;
-    width: 420px;
     box-sizing: border-box;
 }
 
@@ -357,6 +362,7 @@ form {
     gap: 30px;
 }
 
+
 /*ACTIVITES*/
 
 .article-group-activities {
@@ -382,7 +388,6 @@ form {
 }
 
 
-
 /*FOOTER*/
 footer {
     display: flex;
@@ -404,7 +409,8 @@ footer {
     padding: 40px;
 }
 
-/* MEDIA QUERIES*/
+
+/* MEDIA QUERIES MOBILE*/
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
@@ -413,6 +419,10 @@ footer {
         flex-direction: column;
         justify-content: space-between;
         padding-right: 0;
+    }
+
+    .iconstars {
+        bottom: 10px;
     }
 
     h1 {
@@ -425,11 +435,12 @@ footer {
     }
 
     nav {
-        min-width: 320px;
+        min-width: 105%;
     }
 
     ul {
         padding: 0;
+        margin-left: 0;
     }
 
     .nav-li {
@@ -452,7 +463,11 @@ footer {
 
     #Search {
         padding-top: 2px;
+    }
 
+    #search-input {
+        display: flex;
+        justify-content: center;
     }
 
     .button {
@@ -464,10 +479,11 @@ footer {
         display: flex;
         flex-direction: column;
         margin-top: 30px;
-
     }
 
     .buttonfilters {
+        display: flex;
+        justify-content: center;
         width: 100%;
         margin: 0;
     }
@@ -481,7 +497,6 @@ footer {
     .icongroup {
         width: 140px;
         font-size: 14px;
-
     }
 
     .icontext {
@@ -499,16 +514,19 @@ footer {
     #accomodations {
         display: flex;
         flex-direction: column-reverse;
+    }
 
+    .text-maps {
+        padding-bottom: 14px;
     }
 
     .background-popular-header {
         display: flex;
-        justify-content: flex-start;
         gap: 10%;
     }
 
     .background-popular {
+
         width: 110%;
         border-radius: 0;
     }
@@ -518,8 +536,7 @@ footer {
     }
 
     .map-background-popular {
-        width: 100%;
-        padding: 0;
+        width: 97%;
     }
 
     .background-accomodations {
@@ -531,7 +548,6 @@ footer {
 
     .article-group-accomodations a {
         min-width: 100%;
-
     }
 
     .img-accomodations {
@@ -553,9 +569,11 @@ footer {
         width: 100%;
         height: 100%;
     }
+
     .article-group-activities a {
         width: 100%;
     }
+
     .img-activities {
         height: 144px;
         min-width: 100%;
@@ -570,7 +588,6 @@ footer {
         flex-wrap: wrap;
         margin-top: 0;
         padding-top: 0;
-
     }
 
     .footer-div {
@@ -579,10 +596,17 @@ footer {
 
 }
 
+/* MEDIA QUERIES TABLETTE*/
+
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
 
     body {
         margin-left: 30px;
+    }
+
+    .iconstars {
+        bottom: 5px;
     }
 
     header {
@@ -604,7 +628,6 @@ footer {
 
     .buttonfilters {
         gap: 10px;
-
     }
 
     .icongroup {
@@ -621,6 +644,10 @@ footer {
         flex-direction: column
     }
 
+    .text-maps {
+        padding-bottom: 14px;
+    }
+
     h1 {
         margin: 0;
     }
@@ -628,7 +655,7 @@ footer {
     .background-accomodations {
         display: flex;
         justify-content: center;
-        width: 100%;
+        min-width: 93%;
         margin-right: 13px;
         margin-bottom: 50px;
     }
@@ -660,14 +687,11 @@ footer {
         width: 100%;
         margin-right: 13px;
         margin-bottom: 50px;
-
     }
 
     .article-group-popular {
         display: flex;
         flex-direction: row;
-
-
     }
 
     .map-background-popular {
